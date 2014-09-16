@@ -61,3 +61,10 @@ sourcetype=hack_events type=PushEvent | timechart count limit=30
 ```
 Question: When did individuals push their changes?
 ![image](part3_1.png?raw=true)
+
+```
+sourcetype="hackdata" | timechart count(eval(type="PullRequestEvent")) by payload.action usenull=f
+```
+Question: What were the different actions performed on pull requests done over time?
+
+![image](part3_2.png?raw=true)
