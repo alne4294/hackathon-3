@@ -68,3 +68,10 @@ sourcetype="hackdata" | timechart count(eval(type="PullRequestEvent")) by payloa
 Question: What were the different actions performed on pull requests done over time?
 
 ![image](part3_2.png?raw=true)
+
+```
+sourcetype=hack_events type=IssuesEvent | chart count by actor.login
+```
+Question: Who created the most issues?
+
+![image](part3_3.png?raw=true)
